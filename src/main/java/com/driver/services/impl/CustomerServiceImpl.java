@@ -12,7 +12,6 @@ import com.driver.repository.DriverRepository;
 import com.driver.repository.TripBookingRepository;
 import com.driver.model.TripStatus;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -49,7 +48,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 			Driver freeDriver = null;
 			for(Driver driver : driverList){
-				if(driver.getCab().isAvailable()){
+				if(driver.getCab().getAvailable()){
 					freeDriver = driver;
 					break;
 				}
